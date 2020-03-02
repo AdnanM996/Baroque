@@ -1,7 +1,36 @@
 .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 2;
+    padding-left: 10rem;
+
+    &--left,
+    &--right {
+        display: flex;
+    }
 
     & ul {
         display: flex;
         list-style: none;
+    }
+
+    & li {
+
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+    }
+
+    & a {
+        display: inline-block;
+        color: $color-primary;
+        font-size: 1.8rem;
+        font-weight: 400;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $color-terheary;
+        }
     }
 }
