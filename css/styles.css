@@ -25,6 +25,11 @@ body {
 a {
   text-decoration: none; }
 
+.wrapper {
+  width: 120rem;
+  margin: 0 auto;
+  background-color: #fff; }
+
 html {
   font-size: 62.5%; }
 
@@ -125,6 +130,13 @@ body {
       .hero .box__item:not(:last-child) {
         margin-right: 3rem; }
 
+main .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 6rem);
+  gap: 5rem;
+  width: 100%; }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -153,8 +165,12 @@ ul {
 
 .hero {
   position: relative;
-  background-image: url(../../images/slide3.jpg);
+  background-image: url(../images/slide3.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+main {
+  background-color: pink;
+  padding: 10rem 0rem; }
