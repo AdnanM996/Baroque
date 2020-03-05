@@ -1,3 +1,5 @@
+//loading animations
+
 window.addEventListener('load', loader());
 
 function loader(success) {
@@ -41,8 +43,19 @@ function loader(success) {
                         return success();
                     }
             }
-        }, 30);
-}
+        }, 1);
+};
+
+//parallax
+let text = document.querySelector('.text');
+
+window.addEventListener('scroll', () => {
+    let scroll = window.pageYOffset;
+
+    //console.log(scroll);
+
+    text.style.transform = `translateY(${(-(scroll) * 1.05) + 'px'})`;
+});
 
 
 
