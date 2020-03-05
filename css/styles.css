@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+h1 {
+  font-size: 46px; }
+
+h2 {
+  font-size: 40px; }
+
+h3 {
+  font-size: 34px; }
+
+h4 {
+  font-size: 28px; }
+
+h5 {
+  font-size: 22px; }
+
+h6 {
+  font-size: 16px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -60,29 +78,35 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 5rem; }
 
 .box--number {
+  color: rgba(24, 24, 24, 0.6);
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 1.5rem; }
+  .box--number--active {
+    color: #181818; }
 
 .box__text {
+  color: rgba(24, 24, 24, 0.6);
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.3;
   text-transform: capitalize; }
+  .box__text--active {
+    color: #181818; }
 
 .fab {
   color: #fff;
   font-size: 2rem;
   transition: all .3s ease-in-out; }
   .fab:hover {
-    color: #ff954f; }
+    color: #ff822e; }
 
 .fa-chevron-right {
   margin: 0rem 0rem 1.5rem 1rem;
   font-size: 2rem; }
 
 .small--title {
-  color: #ff954f;
+  color: #ff822e;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
@@ -100,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #181818;
   transition: all .3s ease-in-out; }
   .mail:hover {
-    color: #ff954f; }
+    color: #ff822e; }
 
 .cta {
   color: #fff;
@@ -113,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  color: #ff954f;
+  color: #ff822e;
   display: inline-flex;
   font-size: 1.5rem;
   justify-content: center;
@@ -202,7 +226,8 @@ main .grid {
   main .grid__item {
     position: relative;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    overflow: hidden; }
     main .grid__item__box {
       position: absolute;
       bottom: 0%;
@@ -213,7 +238,10 @@ main .grid {
     main .grid__item img {
       width: 100%;
       height: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      transition: all .3s ease-in-out; }
+    main .grid__item:hover img {
+      transform: scale(1.05); }
     main .grid__item--1 {
       grid-column: 1 / 2;
       grid-row: 1 / 2; }
@@ -255,7 +283,7 @@ main .grid {
     transition: all .3s ease-in-out;
     text-transform: capitalize; }
     .nav a:hover {
-      color: #ff954f; }
+      color: #ff822e; }
 
 ul {
   list-style: none; }

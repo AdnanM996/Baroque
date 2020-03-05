@@ -41,16 +41,26 @@ h1, h2, h3, h4, h5, h6 {
 .box {
 
     &--number {
+        color: rgba($color-secondary, .6);
         font-size: 1.4rem;
         font-weight: 700;
         margin-bottom: 1.5rem;
+
+        &--active {
+            color: $color-secondary;
+        }
     }
 
     &__text {
+        color: rgba($color-secondary, .6);
         font-size: 1.8rem;
         font-weight: 700;
         line-height: 1.3;
         text-transform: capitalize;
+
+        &--active {
+            color: $color-secondary;
+        }
     }
 }
 
