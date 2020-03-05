@@ -63,6 +63,7 @@
             justify-content: space-between;
             align-items: flex-start;
             flex-direction: column;
+            opacity: 0;
 
             &:not(:last-child) {
                 margin-right: 3rem;

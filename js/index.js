@@ -1,8 +1,12 @@
+window.addEventListener('load', loader());
+
 function loader(success) {
 
     let obj = document.querySelector('.preloader');
     let inner = document.querySelector('.preloader__inner');
     let page = document.querySelector('.page');
+    let heroHeading = document.querySelector('.hero--heading');
+    let boxItem = document.querySelectorAll('.box__item');
 
     obj.classList.add('show');
     page.classList.remove('show');
@@ -16,6 +20,22 @@ function loader(success) {
                 obj.classList.remove('show');
                 page.classList.add('show');
                 clearInterval(t);
+                heroHeading.style.opacity = '1';
+                heroHeading.style.transform = 'translateY(0%)';
+                heroHeading.style.transition = 'all 1s ease';
+                
+                function boxitem() {
+                        for(let i = 0; i < boxItem.length; i++) {
+                            setInterval(() => {
+                                boxItem[i].style.opacity = 1;
+                                boxItem[i].style.transition = 'all .3s ease';
+                            },i * 300);
+                        } 
+                };
+
+                boxitem();
+
+
                 w = 0;
                     if (success){
                         return success();
@@ -24,4 +44,5 @@ function loader(success) {
         }, 30);
 }
 
-loader();
+
+
