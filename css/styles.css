@@ -93,6 +93,15 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   font-weight: 700; }
 
+.copy, .info {
+  font-weight: 700; }
+
+.mail {
+  color: #181818;
+  transition: all .3s ease-in-out; }
+  .mail:hover {
+    color: #ff954f; }
+
 .cta {
   color: #fff;
   display: inline-block;
@@ -112,6 +121,15 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   padding: 1rem 3.6rem;
   outline-width: 0; }
+
+.footer {
+  padding: 2.5rem 0rem; }
+  .footer .wrapper {
+    border-top: 1px solid rgba(24, 24, 24, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 2.5rem; }
 
 .form {
   background-color: transparent;

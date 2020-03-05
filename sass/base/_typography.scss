@@ -84,3 +84,16 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     font-weight: 700;
 }
+
+.copy, .info {
+    font-weight: 700;
+}
+
+.mail {
+    color: $color-secondary;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        color: $color-terheary;
+    }
+}
