@@ -1,0 +1,17 @@
+.form {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba($color-secondary, .6);
+    padding-bottom: 1.2rem;
+    margin-top: 5rem;
+}
+
+input[type="email"] {
+    background-color: transparent;
+    border: 0;
+    outline-width: 0;
+    padding: .8rem 1.6rem;
+    flex: 2;
+}

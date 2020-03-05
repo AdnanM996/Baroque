@@ -5,3 +5,17 @@
     font-weight: 400;
     text-transform: capitalize;
 }
+
+.btn {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    color: $color-terheary;
+    display: inline-flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 3.6rem;
+    outline-width: 0;
+}

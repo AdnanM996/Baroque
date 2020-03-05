@@ -10,6 +10,12 @@ body {
     font-weight: 300;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: $color-secondary;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+}
+
 .logo {
     color: $color-primary;
     font-size: 3.2rem;
@@ -63,4 +69,18 @@ body {
 .fa-chevron-right {
     margin: 0rem 0rem 1.5rem 1rem;
     font-size: 2rem;
+}
+
+.small--title {
+    color: $color-terheary;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+}
+
+.dark {
+    color: #000;
+    display: inline-block;
+    font-weight: 700;
 }
