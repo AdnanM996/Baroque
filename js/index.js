@@ -79,5 +79,10 @@ window.addEventListener('scroll', () => {
 
 });
 
+//Footer year
 
+let date = new Date();
+let year = date.getFullYear();
+let footerYear = document.querySelector('.year');
 
+footerYear.innerHTML = year;
