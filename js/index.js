@@ -43,7 +43,7 @@ function loader(success) {
                         return success();
                     }
             }
-        }, 1);
+        }, 30);
 };
 
 //parallax
@@ -55,6 +55,28 @@ window.addEventListener('scroll', () => {
     //console.log(scroll);
 
     text.style.transform = `translateY(${(-(scroll) * 1.05) + 'px'})`;
+
+    //main section animations
+    let mainSec = document.querySelector('.main');
+    let gridHeading = document.querySelectorAll('.grid--heading');
+    let overlay = document.querySelectorAll('.overlay');
+
+    if(scroll >( mainSec.clientHeight / 2)) {
+        for(let i = 0; i < gridHeading.length; i++) {
+            gridHeading[i].style.transform = 'translateY(0%)';
+            gridHeading[i].style.opacity = '1';
+            gridHeading[i].style.transition = 'all .5s ease';
+        }
+
+        for(let i = 0; i < overlay.length; i++) {
+            setInterval(() => {
+                overlay[i].style.transform = 'translateX(100%)';
+                overlay[i].style.opacity = '0';
+                overlay[i].style.transition = 'all .5s ease-out';
+            },i * 500);
+        }
+    }
+
 });
 
 
