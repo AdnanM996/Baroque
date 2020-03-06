@@ -79,6 +79,14 @@ window.addEventListener('scroll', () => {
 
 });
 
+//open nav
+let menu = document.querySelector('.menu');
+let nav = document.querySelector('.nav');
+
+menu.addEventListener('click', () => {
+    nav.classList.toggle('nav--open');
+});
+
 //Footer year
 
 let date = new Date();
