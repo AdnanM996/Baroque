@@ -41,8 +41,16 @@ a {
     }
 
     @media only screen and (min-width: $media-small) and (max-width: $media-medium) {
-        width: 760px;
-    } 
+        width: 750px;
+    }
+
+    @media only screen and (min-width: $media-medium) and (max-width: $media-large) {
+        width: 960px;
+    }
+
+    @media only screen and (min-width: $media-large) {
+        width: 1200px;
+    }
 }
 
 .preloader {
