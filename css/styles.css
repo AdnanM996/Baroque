@@ -49,6 +49,9 @@ a {
   @media only screen and (max-width: 768px) {
     .wrapper {
       width: 90%; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .wrapper {
+      width: 760px; } }
 
 .preloader {
   position: absolute;
@@ -79,6 +82,9 @@ html {
   @media only screen and (max-width: 768px) {
     html {
       font-size: 50%; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    html {
+      font-size: 55%; } }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -237,6 +243,11 @@ input[type="email"] {
       grid-template-columns: 10% auto;
       grid-template-rows: 10% auto 10%;
       grid-template-areas: "header header" "social text" "social box"; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .hero {
+      grid-template-columns: 10% auto;
+      grid-template-rows: 15% auto 15%;
+      grid-template-areas: "header header" "social text" "social box"; } }
   .hero .header {
     grid-area: header;
     display: flex;
@@ -247,6 +258,10 @@ input[type="email"] {
       .hero .header {
         grid-area: header;
         padding: 2.5rem; } }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .hero .header {
+        grid-area: header;
+        padding: 2.5rem 3.5rem; } }
   .hero .social {
     grid-area: social;
     display: flex;
@@ -258,6 +273,9 @@ input[type="email"] {
       .hero .social {
         grid-area: social;
         padding-bottom: 2rem; } }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .hero .social {
+        grid-area: social; } }
     .hero .social__items ul li:not(:last-child) {
       margin-bottom: 2.5rem; }
   .hero .text {
@@ -267,6 +285,9 @@ input[type="email"] {
     align-items: flex-start;
     flex-direction: column; }
     @media only screen and (max-width: 768px) {
+      .hero .text {
+        grid-area: text; } }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
       .hero .text {
         grid-area: text; } }
   .hero .box {
@@ -285,6 +306,10 @@ input[type="email"] {
         justify-self: flex-start;
         width: 100%;
         padding: 1.25rem 2.5rem; } }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .hero .box {
+        grid-area: box;
+        width: 70%; } }
     .hero .box__item {
       display: flex;
       justify-content: space-between;
@@ -306,6 +331,13 @@ main .grid {
       grid-template-rows: auto 60rem 60rem 60rem 60rem auto;
       gap: 5rem;
       width: 90%;
+      margin: 0 auto 5rem auto; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    main .grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 40rem 40rem 40rem 40rem auto;
+      gap: 5rem;
+      width: 100%;
       margin: 0 auto 5rem auto; } }
   main .grid__item {
     position: relative;

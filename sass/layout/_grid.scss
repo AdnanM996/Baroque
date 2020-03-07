@@ -16,6 +16,16 @@
             "social text"
             "social box"
         ;
+    }
+
+    @media only screen and (min-width: $media-small) and (max-width: $media-medium) {
+        grid-template-columns: 10% auto;
+        grid-template-rows: 15% auto 15%;
+        grid-template-areas: 
+            "header header"
+            "social text"
+            "social box"
+        ;
     } 
 
     height: 100%;
@@ -32,6 +42,11 @@
         @media only screen and (max-width: $media-small) {
             grid-area: header;
             padding: 2.5rem;
+        }
+
+        @media only screen and (min-width: $media-small) and (max-width: $media-medium) {
+            grid-area: header;
+            padding: 2.5rem 3.5rem;
         } 
     }
     
@@ -46,6 +61,10 @@
         @media only screen and (max-width: $media-small) {
             grid-area: social;
             padding-bottom: 2rem;
+        }
+
+        @media only screen and (min-width: $media-small) and (max-width: $media-medium) {
+            grid-area: social;
         } 
 
         &__items {
@@ -68,6 +87,10 @@
 
         @media only screen and (max-width: $media-small) {
             grid-area: text;
+        }
+
+        @media only screen and (min-width: $media-small) and (max-width: $media-medium) {
+            grid-area: text;
         } 
     }
     
@@ -87,6 +110,11 @@
             justify-self: flex-start;
             width: 100%;
             padding: 1.25rem 2.5rem;
+        }
+
+        @media only screen and (min-width: $media-small) and (max-width: $media-medium) {
+            grid-area: box;
+            width: 70%;
         } 
 
         &__item {
@@ -118,6 +146,14 @@ main {
             width: 90%;
             margin: 0 auto 5rem auto;
         }
+
+        @media only screen and (min-width: $media-small) and (max-width: $media-medium) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto 40rem 40rem 40rem 40rem auto;
+            gap: 5rem;
+            width: 100%;
+            margin: 0 auto 5rem auto;
+        } 
 
         &__item {
             position: relative;
