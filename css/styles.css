@@ -105,7 +105,9 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
   color: #fff;
   font-size: 3.2rem;
-  font-weight: 400; }
+  font-weight: 400;
+  position: relative;
+  z-index: 300000; }
 
 .hero h6 {
   color: #fff; }
@@ -430,20 +432,30 @@ main .grid {
   padding-left: 10rem; }
   @media only screen and (max-width: 768px) {
     .nav {
-      display: none;
+      display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding-left: 0; } }
+      padding: 0;
+      transform: translateX(100%);
+      transition: all .5s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      bottom: 0%;
+      z-index: 250000;
+      background-color: #181818; } }
   .nav--left, .nav--right {
     display: flex; }
     @media only screen and (max-width: 768px) {
       .nav--left, .nav--right {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        width: 100%; } }
+        display: inline-flex; } }
+  @media only screen and (max-width: 768px) {
+    .nav--left {
+      margin-bottom: 5rem; } }
   .nav ul {
     display: flex;
     list-style: none; }
@@ -456,6 +468,10 @@ main .grid {
         width: 100%; } }
   .nav li:not(:last-child) {
     margin-right: 2.5rem; }
+    @media only screen and (max-width: 768px) {
+      .nav li:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 5rem; } }
   .nav a {
     display: inline-block;
     color: #fff;
@@ -465,21 +481,14 @@ main .grid {
     text-transform: capitalize; }
     .nav a:hover {
       color: #ff822e; }
+    @media only screen and (max-width: 768px) {
+      .nav a {
+        font-size: 2.5rem; } }
   .nav--open {
-    position: fixed;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    background-color: #181818;
-    display: flex;
-    z-index: 250000;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: all .5s ease-in-out; }
+    transform: translateX(0%);
+    transition: all .5s ease-in-out;
+    opacity: 1;
+    visibility: visible; }
 
 ul {
   list-style: none; }
@@ -492,11 +501,21 @@ ul {
   align-items: center;
   flex-direction: column;
   position: relative;
-  z-index: 300000; }
+  z-index: 300000;
+  overflow: hidden; }
   .menu__line {
     height: .3rem;
     width: 100%;
-    background-color: #fff; }
+    background-color: #fff;
+    backface-visibility: hidden;
+    transition: all .5s ease-in-out; }
+    .menu__line--topOpen {
+      transform: rotate(45deg) translate(7px, 7px); }
+    .menu__line--midOpen {
+      opacity: 0;
+      visibility: hidden; }
+    .menu__line--bottomOpen {
+      transform: rotate(-45deg) translate(8px, -8px); }
   @media only screen and (max-width: 768px) {
     .menu {
       display: flex; } }

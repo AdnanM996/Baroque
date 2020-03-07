@@ -54,7 +54,7 @@ window.addEventListener('scroll', () => {
 
     //console.log(scroll);
 
-    text.style.transform = `translateY(${(-(scroll) * 1.05) + 'px'})`;
+    text.style.transform = `translateY(${(-(scroll) * 1.2) + 'px'})`;
 
     //main section animations
     let mainSec = document.querySelector('.main');
@@ -81,10 +81,16 @@ window.addEventListener('scroll', () => {
 
 //open nav
 let menu = document.querySelector('.menu');
+let menuTop = document.querySelector('.menu__line--top');
+let menuMid = document.querySelector('.menu__line--mid');
+let menuBottom = document.querySelector('.menu__line--bottom');
 let nav = document.querySelector('.nav');
 
 menu.addEventListener('click', () => {
     nav.classList.toggle('nav--open');
+    menuTop.classList.toggle('menu__line--topOpen');
+    menuMid.classList.toggle('menu__line--midOpen');
+    menuBottom.classList.toggle('menu__line--bottomOpen');
 });
 
 //Footer year

@@ -6,11 +6,22 @@
     padding-left: 10rem;
 
     @media only screen and (max-width: $media-small) {
-        display: none;
+        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-left: 0;
+        padding: 0;
+        transform: translateX(100%);
+        transition: all .5s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        bottom: 0%;
+        z-index: 250000;
+        background-color: $color-secondary;
     } 
 
     &--left,
@@ -18,12 +29,14 @@
         display: flex;
 
         @media only screen and (max-width: $media-small) {
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100%;
-            width: 100%;
+            display: inline-flex;
         } 
+    }
+
+    &--left {
+        @media only screen and (max-width: $media-small) {
+            margin-bottom: 5rem;
+        }
     }
 
     & ul {
@@ -42,6 +55,11 @@
 
         &:not(:last-child) {
             margin-right: 2.5rem;
+
+            @media only screen and (max-width: $media-small) {
+                margin-right: 0;
+                margin-bottom: 5rem;
+            }
         }
     }
 
@@ -56,23 +74,17 @@
         &:hover {
             color: $color-terheary;
         }
+
+        @media only screen and (max-width: $media-small) {
+            font-size: 2.5rem;
+        }
     }
 
     &--open {
-        position: fixed;
-        top: 0%;
-        right: 0%;
-        bottom: 0%;
-        left: 0%;
-        height: 100%;
-        width: 100%;
-        background-color: $color-secondary;
-        display: flex;
-        z-index: 250000;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        transform: translateX(0%);
         transition: all .5s ease-in-out;
+        opacity: 1;
+        visibility: visible;
     }
 }
 
@@ -89,11 +101,27 @@ ul {
     flex-direction: column;
     position: relative;
     z-index: 300000;
+    overflow: hidden;
 
     &__line {
         height: .3rem;
         width: 100%;
         background-color: $color-primary;
+        backface-visibility: hidden;
+        transition: all .5s ease-in-out;
+
+        &--topOpen {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        &--midOpen {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &--bottomOpen {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
     }
 
     @media only screen and(max-width: $media-small) {
